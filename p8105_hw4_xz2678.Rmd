@@ -1,0 +1,16 @@
+---
+title: "p8105_hw4_xz2678"
+author: "Xinyan Zheng"
+date: "October 25, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(janitor)
+data_pups <- read_csv("./FAS_pups.csv")%>%
+  clean_names()%>%
+  gather(key= PD_outcome, value= days, pd_ears:pd_walk)
+```
+
+
